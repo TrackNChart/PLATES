@@ -1,21 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icy's Birthday Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-          /* This puts the image on the whole page */
-            background-image: url('loginUI.png');
-            background-size: cover;
+        * {
             margin: 0;
-            height: 100vh;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffc3a0 0%, #ffafbd 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #4a4a4a;
+        }
+
+        .invitation-card {
+            background-color: rgba(255, 255, 255, 0.95);
+            width: 90%;
+            max-width: 450px;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 3px dashed #ff9a9e;
+        }
+
+        /* Decorative emojis */
+        .decor {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #ff6b81;
+            font-size: 2.8rem;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-weight: 600;
+            color: #ff9a9e;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .details-box {
+            background-color: #fff0f3;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .detail-item {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .detail-item strong {
+            color: #ff6b81;
+            display: inline-block;
+            width: 80px;
+            text-align: left;
+        }
+
+        .rsvp-btn {
+            background: linear-gradient(to right, #ff9a9e, #fecfef);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .rsvp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 107, 129, 0.4);
+        }
+
+        /* Confetti dots in background */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+        .c1 { top: 10%; left: 10%; background: #ffd166; }
+        .c2 { top: 20%; right: 10%; background: #ef476f; }
+        .c3 { bottom: 15%; left: 15%; background: #06d6a0; }
+        .c4 { bottom: 20%; right: 15%; background: #118ab2; }
     </style>
 </head>
 <body>
 
-    <h2 title="I'm a header">The title Attribute</h2>
+    <div class="invitation-card">
+        <div class="confetti c1"></div>
+        <div class="confetti c2"></div>
+        <div class="confetti c3"></div>
+        <div class="confetti c4"></div>
 
-    <p title="I'm a tooltip">Mouse over this paragraph to see the tooltip.</p>
+        <div class="decor">🎂✨🎈</div>
+        
+        <h1>You're Invited!</h1>
+        <h2>To Celebrate Icy's Birthday</h2>
+        
+        <p class="message">
+            Join us for a day filled with sweet treats, joyful laughter, and wonderful memories as we celebrate Icy's special day!
+        </p>
+
+        <div class="details-box">
+            <div class="detail-item">
+                <strong>When:</strong> April 27, 2026
+            </div>
+            <div class="detail-item">
+                <strong>Time:</strong> 2:00 PM onwards
+            </div>
+            <div class="detail-item">
+                <strong>Where:</strong> Libmanan
+            </div>
+        </div>
+
+        <a href="#" class="rsvp-btn">RSVP Now 💌</a>
+    </div>
 
 </body>
 </html>
